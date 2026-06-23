@@ -1,0 +1,9 @@
+# Brainstorming visual-companion scratch (not part of the site)
+.superpowers/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Node (only if a local toolchain is added later)
+node_modules/
