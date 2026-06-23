@@ -74,7 +74,7 @@ export function matchDisplay(match, tz) {
     state: 'upcoming',
     score: null,
     minute: null,
-    time: toLocalTime(match.utcDate, tz),
+    time: match.utcDate ? toLocalTime(match.utcDate, tz) : '—',
     badge: null,
   };
 }

@@ -92,3 +92,11 @@ test('placeKnockout buckets knockout matches by stage and ignores group games', 
   assert.equal(out.FINAL[0].id, 1);
   assert.deepEqual(out.QUARTER_FINALS, []);
 });
+
+test('matchDisplay shows — for an upcoming knockout match with no kickoff date yet', () => {
+  const d = matchDisplay(
+    { status: 'SCHEDULED', utcDate: null, score: { home: null, away: null } },
+    'America/New_York',
+  );
+  assert.deepEqual(d, { state: 'upcoming', score: null, minute: null, time: '—', badge: null });
+});
