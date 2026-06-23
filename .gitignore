@@ -7,3 +7,6 @@
 
 # Node (only if a local toolchain is added later)
 node_modules/
+
+# Local Claude Code config / preview scratch
+.claude/
