@@ -1,0 +1,25 @@
+{
+  "matches": [
+    {
+      "id": 1,
+      "utcDate": "2026-06-23T19:00:00Z",
+      "status": "IN_PLAY",
+      "minute": 67,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B",
+      "homeTeam": { "name": "Argentina", "tla": "ARG", "crest": "https://x/arg.png" },
+      "awayTeam": { "name": "Nigeria", "tla": "NGA", "crest": "https://x/nga.png" },
+      "score": { "fullTime": { "home": 2, "away": 1 } }
+    },
+    {
+      "id": 2,
+      "utcDate": "2026-07-19T19:00:00Z",
+      "status": "SCHEDULED",
+      "stage": "FINAL",
+      "group": null,
+      "homeTeam": { "name": null, "tla": null, "crest": null },
+      "awayTeam": { "name": null, "tla": null, "crest": null },
+      "score": { "fullTime": { "home": null, "away": null } }
+    }
+  ]
+}

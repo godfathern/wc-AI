@@ -1,0 +1,18 @@
+{
+  "standings": [
+    {
+      "stage": "GROUP_STAGE",
+      "type": "TOTAL",
+      "group": "GROUP_B",
+      "table": [
+        {
+          "position": 1,
+          "team": { "name": "Argentina", "tla": "ARG", "crest": "https://x/arg.png" },
+          "playedGames": 2, "won": 2, "draw": 0, "lost": 0,
+          "goalsFor": 5, "goalsAgainst": 1, "goalDifference": 4, "points": 6
+        }
+      ]
+    },
+    { "stage": "GROUP_STAGE", "type": "HOME", "group": "GROUP_B", "table": [] }
+  ]
+}
