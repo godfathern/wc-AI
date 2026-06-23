@@ -34,8 +34,11 @@ python3 -m http.server 8000  # serve over http (ES modules + fetch need http, no
 # open http://localhost:8000
 
 # To pull REAL data locally instead of demo data:
-FOOTBALL_DATA_TOKEN=xxxxx node scripts/fetch-data.mjs
+cp .env.example .env                          # then paste your token into .env
+node --env-file=.env scripts/fetch-data.mjs   # Node 20.6+ reads .env natively (no dependency)
 ```
+
+`.env` is gitignored, so your token never gets committed.
 
 ## Notes
 
