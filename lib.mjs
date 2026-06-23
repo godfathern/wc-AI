@@ -51,3 +51,48 @@ export function isToday(utcISO, nowMs, tz) {
   const nowISO = new Date(nowMs).toISOString();
   return localDateKey(utcISO, tz) === localDateKey(nowISO, tz);
 }
+
+export function matchDisplay(match, tz) {
+  const status = match.status;
+  if (status === 'IN_PLAY' || status === 'PAUSED') {
+    return {
+      state: 'live',
+      score: `${match.score?.home ?? 0}–${match.score?.away ?? 0}`,
+      minute: match.minute ? `${match.minute}'` : null,
+      badge: 'TRỰC TIẾP',
+    };
+  }
+  if (status === 'FINISHED') {
+    return {
+      state: 'finished',
+      score: `${match.score?.home ?? 0}–${match.score?.away ?? 0}`,
+      minute: null,
+      badge: 'KẾT THÚC',
+    };
+  }
+  return {
+    state: 'upcoming',
+    score: null,
+    minute: null,
+    time: toLocalTime(match.utcDate, tz),
+    badge: null,
+  };
+}
+
+export function todaysMatches(matches, nowMs, tz) {
+  return matches
+    .filter((m) => isToday(m.utcDate, nowMs, tz))
+    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+}
+
+export function placeKnockout(matches) {
+  const out = {};
+  for (const stage of KNOCKOUT_STAGES) out[stage] = [];
+  for (const m of matches) {
+    if (out[m.stage]) out[m.stage].push(m);
+  }
+  for (const stage of KNOCKOUT_STAGES) {
+    out[stage].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+  }
+  return out;
+}

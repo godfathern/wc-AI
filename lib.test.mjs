@@ -45,3 +45,50 @@ test('isToday compares local calendar dates, not UTC', () => {
   assert.equal(isToday('2026-06-24T01:00:00Z', now, tz), true);
   assert.equal(isToday('2026-06-24T05:00:00Z', now, tz), false);
 });
+
+import { matchDisplay, todaysMatches, placeKnockout } from './lib.mjs';
+
+test('matchDisplay describes live, finished, and upcoming matches', () => {
+  const live = matchDisplay(
+    { status: 'IN_PLAY', minute: 67, score: { home: 2, away: 1 } },
+    'America/New_York',
+  );
+  assert.deepEqual(live, { state: 'live', score: '2–1', minute: "67'", badge: 'TRỰC TIẾP' });
+
+  const done = matchDisplay(
+    { status: 'FINISHED', score: { home: 0, away: 0 } },
+    'America/New_York',
+  );
+  assert.deepEqual(done, { state: 'finished', score: '0–0', minute: null, badge: 'KẾT THÚC' });
+
+  const soon = matchDisplay(
+    { status: 'TIMED', utcDate: '2026-06-23T19:00:00Z', score: { home: null, away: null } },
+    'America/New_York',
+  );
+  assert.deepEqual(soon, { state: 'upcoming', score: null, minute: null, time: '15:00', badge: null });
+});
+
+test('todaysMatches filters to today and sorts by kickoff', () => {
+  const now = Date.parse('2026-06-23T20:00:00Z');
+  const tz = 'America/New_York';
+  const matches = [
+    { id: 1, utcDate: '2026-06-23T23:00:00Z' },
+    { id: 2, utcDate: '2026-06-23T21:00:00Z' },
+    { id: 3, utcDate: '2026-06-25T19:00:00Z' },
+  ];
+  assert.deepEqual(todaysMatches(matches, now, tz).map(m => m.id), [2, 1]);
+});
+
+test('placeKnockout buckets knockout matches by stage and ignores group games', () => {
+  const matches = [
+    { id: 1, stage: 'FINAL', utcDate: '2026-07-19T19:00:00Z' },
+    { id: 2, stage: 'GROUP_STAGE', utcDate: '2026-06-23T19:00:00Z' },
+    { id: 3, stage: 'LAST_16', utcDate: '2026-07-05T19:00:00Z' },
+    { id: 4, stage: 'LAST_16', utcDate: '2026-07-04T19:00:00Z' },
+  ];
+  const out = placeKnockout(matches);
+  assert.equal(out.GROUP_STAGE, undefined);
+  assert.deepEqual(out.LAST_16.map(m => m.id), [4, 3]);
+  assert.equal(out.FINAL[0].id, 1);
+  assert.deepEqual(out.QUARTER_FINALS, []);
+});
