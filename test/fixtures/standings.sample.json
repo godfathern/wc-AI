@@ -1,9 +1,9 @@
 {
   "standings": [
     {
-      "stage": "GROUP_STAGE",
+      "stage": "ALL",
       "type": "TOTAL",
-      "group": "GROUP_B",
+      "group": "Group B",
       "table": [
         {
           "position": 1,
@@ -13,6 +13,6 @@
         }
       ]
     },
-    { "stage": "GROUP_STAGE", "type": "HOME", "group": "GROUP_B", "table": [] }
+    { "stage": "ALL", "type": "HOME", "group": "Group B", "table": [] }
   ]
 }

@@ -6,13 +6,20 @@ function team(t) {
   };
 }
 
+// football-data.org labels groups inconsistently across endpoints:
+// /matches uses "GROUP_A", /standings uses "Group A". Normalize both to "A".
+function groupKey(raw) {
+  if (!raw) return null;
+  return String(raw).replace(/^group[\s_]+/i, '').trim();
+}
+
 export function normalize(matchesResp, standingsResp) {
   const matches = (matchesResp.matches || []).map((m) => ({
     id: m.id,
     utcDate: m.utcDate,
     status: m.status,
     stage: m.stage,
-    group: m.group ? m.group.replace(/^GROUP_/, '') : null,
+    group: groupKey(m.group),
     minute: m.minute ?? null,
     home: team(m.homeTeam),
     away: team(m.awayTeam),
@@ -25,7 +32,7 @@ export function normalize(matchesResp, standingsResp) {
   const standings = (standingsResp.standings || [])
     .filter((s) => s.type === 'TOTAL')
     .map((s) => ({
-      group: s.group ? s.group.replace(/^GROUP_/, '') : null,
+      group: groupKey(s.group),
       table: (s.table || []).map((r) => ({
         team: r.team?.name ?? '',
         code: r.team?.tla ?? '',

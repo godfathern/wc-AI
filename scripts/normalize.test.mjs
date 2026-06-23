@@ -29,11 +29,21 @@ test('normalize handles a TBD knockout match (null team/score)', () => {
   assert.equal(matches[1].stage, 'FINAL');
 });
 
-test('normalize keeps only TOTAL standings and strips GROUP_ prefix', () => {
+test('normalize keeps only TOTAL standings and strips the group prefix', () => {
   const { standings } = normalize(matchesResp, standingsResp);
   assert.equal(standings.length, 1);
   assert.equal(standings[0].group, 'B');
   assert.equal(standings[0].table[0].code, 'ARG');
   assert.equal(standings[0].table[0].points, 6);
   assert.equal(standings[0].table[0].gd, 4);
+});
+
+test('normalize unifies both group label formats to a bare letter', () => {
+  // /matches uses "GROUP_A"; /standings uses "Group A" — both must become "A"
+  const out = normalize(
+    { matches: [{ id: 9, group: 'GROUP_A', homeTeam: {}, awayTeam: {}, score: {} }] },
+    { standings: [{ type: 'TOTAL', group: 'Group A', table: [] }] },
+  );
+  assert.equal(out.matches[0].group, 'A');
+  assert.equal(out.standings[0].group, 'A');
 });
