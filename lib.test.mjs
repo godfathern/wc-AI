@@ -25,3 +25,23 @@ test('sortStandings orders by points, then GD, then GF', () => {
   ];
   assert.deepEqual(sortStandings(table).map(r => r.team), ['C', 'B', 'A']);
 });
+
+import { toLocalTime, localDateKey, isToday } from './lib.mjs';
+
+test('toLocalTime formats UTC into a 24h local time string', () => {
+  assert.equal(toLocalTime('2026-06-23T23:00:00Z', 'America/New_York'), '19:00');
+  assert.equal(toLocalTime('2026-06-23T19:00:00Z', 'America/New_York'), '15:00');
+});
+
+test('localDateKey returns YYYY-MM-DD in the given zone', () => {
+  assert.equal(localDateKey('2026-06-24T01:00:00Z', 'America/New_York'), '2026-06-23');
+  assert.equal(localDateKey('2026-06-24T05:00:00Z', 'America/New_York'), '2026-06-24');
+});
+
+test('isToday compares local calendar dates, not UTC', () => {
+  const now = Date.parse('2026-06-23T20:00:00Z'); // 16:00 in New York on the 23rd
+  const tz = 'America/New_York';
+  assert.equal(isToday('2026-06-23T23:00:00Z', now, tz), true);
+  assert.equal(isToday('2026-06-24T01:00:00Z', now, tz), true);
+  assert.equal(isToday('2026-06-24T05:00:00Z', now, tz), false);
+});

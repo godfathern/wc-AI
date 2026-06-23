@@ -27,3 +27,27 @@ export function sortStandings(table) {
       String(a.team).localeCompare(String(b.team)),
   );
 }
+
+export function toLocalTime(utcISO, tz) {
+  return new Intl.DateTimeFormat('en-GB', {
+    timeZone: tz,
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  }).format(new Date(utcISO));
+}
+
+export function localDateKey(utcISO, tz) {
+  // en-CA renders as YYYY-MM-DD
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: tz,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date(utcISO));
+}
+
+export function isToday(utcISO, nowMs, tz) {
+  const nowISO = new Date(nowMs).toISOString();
+  return localDateKey(utcISO, tz) === localDateKey(nowISO, tz);
+}
