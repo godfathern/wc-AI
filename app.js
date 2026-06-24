@@ -12,7 +12,7 @@ const PLAYER_PHOTOS = [
   'assets/players/player1.svg',
   'assets/players/player2.svg',
   'assets/players/player3.svg',
-  'assets/players/player4.svg',
+  'assets/players/player4.jpg',
   'assets/players/player5.svg',
   'assets/players/player6.svg',
 ];
