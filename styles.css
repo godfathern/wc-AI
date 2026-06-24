@@ -151,13 +151,17 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
 .bracket-scroll { overflow-x: auto; padding-bottom: 8px; }
 .bracket {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   gap: 10px;
   min-width: max-content;
+  min-height: 620px;
 }
 .bracket-col { display: flex; flex-direction: column; gap: 8px; min-width: 132px; }
-.bracket-col.center { min-width: 372px; align-items: center; }
+.bracket-col.center { min-width: 372px; align-items: center; justify-content: center; }
+/* Equal-height columns + space-around make each round's slots land at the
+   vertical midpoints of the round that feeds it — proper bracket alignment. */
+.col-slots { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
 .round-head {
   color: #fff; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
   text-align: center; padding: 6px 8px; border-radius: 6px;

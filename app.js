@@ -123,7 +123,9 @@ function koSlot(m) {
 function bracketColumn(label, cls, matches) {
   const col = el('div', 'bracket-col');
   col.appendChild(el('div', 'round-head ' + cls, label));
-  (matches || []).forEach((m) => col.appendChild(koSlot(m)));
+  const slots = el('div', 'col-slots');
+  (matches || []).forEach((m) => slots.appendChild(koSlot(m)));
+  col.appendChild(slots);
   return col;
 }
 
