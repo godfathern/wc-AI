@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" width="120" height="160" role="img" aria-label="Cầu thủ 4">
+  <defs><linearGradient id="g4" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e2a312"/><stop offset="1" stop-color="#b87908"/>
+  </linearGradient></defs>
+  <rect width="120" height="160" rx="14" fill="url(#g4)"/>
+  <text x="60" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#ffffff" opacity="0.92">CẦU THỦ 4</text>
+  <circle cx="60" cy="74" r="24" fill="#ffffff" opacity="0.92"/>
+  <path d="M24 156 C24 116 40 100 60 100 C80 100 96 116 96 156 Z" fill="#ffffff" opacity="0.92"/>
+</svg>

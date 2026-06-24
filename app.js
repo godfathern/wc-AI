@@ -6,6 +6,17 @@ import {
 const TZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let lastData = null;
 
+// Placeholder player portraits shown in the centre of the bracket (like the poster).
+// Replace the files in assets/players/ — or point these paths at your own images.
+const PLAYER_PHOTOS = [
+  'assets/players/player1.svg',
+  'assets/players/player2.svg',
+  'assets/players/player3.svg',
+  'assets/players/player4.svg',
+  'assets/players/player5.svg',
+  'assets/players/player6.svg',
+];
+
 async function load() {
   try {
     const res = await fetch('data/worldcup.json?t=' + Date.now());
@@ -116,6 +127,19 @@ function bracketColumn(label, cls, matches) {
   return col;
 }
 
+function playersStrip() {
+  const strip = el('div', 'players-strip');
+  PLAYER_PHOTOS.forEach((src, i) => {
+    const img = document.createElement('img');
+    img.className = 'player-card';
+    img.src = src;
+    img.alt = 'Cầu thủ ' + (i + 1);
+    img.onerror = function () { this.style.visibility = 'hidden'; };
+    strip.appendChild(img);
+  });
+  return strip;
+}
+
 function half(arr) {
   const list = arr || [];
   const mid = Math.ceil(list.length / 2);
@@ -137,8 +161,9 @@ function renderBracket(byStage) {
   wrap.appendChild(bracketColumn(STAGE_LABEL.QUARTER_FINALS, 'qf', qfL));
   wrap.appendChild(bracketColumn(STAGE_LABEL.SEMI_FINALS, 'sf', sfL));
 
-  // Center: final + trophy + third place
+  // Center: players strip (poster hero) + final + trophy + third place
   const center = el('div', 'bracket-col center');
+  center.appendChild(playersStrip());
   center.appendChild(el('div', 'round-head final', STAGE_LABEL.FINAL));
   (byStage.FINAL || []).forEach((m) => center.appendChild(koSlot(m)));
   center.appendChild(el('div', 'trophy-centerpiece', '<div class="cup">🏆</div><div class="cap">VÔ ĐỊCH 2026</div>'));

@@ -157,7 +157,7 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
   min-width: max-content;
 }
 .bracket-col { display: flex; flex-direction: column; gap: 8px; min-width: 132px; }
-.bracket-col.center { min-width: 170px; align-items: center; }
+.bracket-col.center { min-width: 372px; align-items: center; }
 .round-head {
   color: #fff; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;
   text-align: center; padding: 6px 8px; border-radius: 6px;
@@ -192,6 +192,23 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
 }
 .trophy-centerpiece .cup { font-size: 64px; line-height: 1; }
 .trophy-centerpiece .cap { font-size: 12px; font-weight: 800; color: var(--final); margin-top: 4px; }
+
+.players-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.player-card {
+  width: 56px;
+  height: 74px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(20, 33, 61, 0.2);
+}
 
 /* ---------- Footer ---------- */
 #statusbar {
