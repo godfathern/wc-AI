@@ -6,6 +6,7 @@
       "status": "IN_PLAY",
       "minute": 67,
       "stage": "GROUP_STAGE",
+      "matchday": 1,
       "group": "GROUP_B",
       "homeTeam": { "name": "Argentina", "tla": "ARG", "crest": "https://x/arg.png" },
       "awayTeam": { "name": "Nigeria", "tla": "NGA", "crest": "https://x/nga.png" },

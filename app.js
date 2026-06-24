@@ -1,11 +1,10 @@
 import {
-  GROUPS, KNOCKOUT_STAGES, STAGE_LABEL, groupLabel,
-  sortStandings, matchDisplay, todaysMatches, placeKnockout,
+  GROUPS, STAGE_LABEL, MATCHDAY_LABEL, groupLabel,
+  sortStandings, matchDisplay, toLocalDateTime, groupStageByMatchday, placeKnockout,
 } from './lib.mjs';
 
 const TZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let lastData = null;
-let lastDateKey = null;
 
 async function load() {
   try {
@@ -18,21 +17,6 @@ async function load() {
   }
 }
 
-function render(data) {
-  const now = Date.now();
-  const matches = data.matches || [];
-  const standingsByGroup = Object.fromEntries((data.standings || []).map((s) => [s.group, s.table]));
-  const today = todaysMatches(matches, now, TZ);
-  const todayIds = new Set(today.map((m) => m.id));
-
-  renderGroups(standingsByGroup, matches, todayIds);
-  renderToday(today);
-  renderBracket(placeKnockout(matches), todayIds);
-  renderLiveCount(matches);
-  renderStatus(data.updatedAt);
-  lastDateKey = new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date(now));
-}
-
 function el(tag, className, html) {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -41,106 +25,144 @@ function el(tag, className, html) {
 }
 
 function teamLabel(t) {
-  return t.code || t.name || 'TBD';
+  return (t && (t.code || t.name)) || 'TBD';
 }
 
-function renderGroups(standingsByGroup, matches, todayIds) {
-  const todayGroups = new Set(
-    matches.filter((m) => todayIds.has(m.id) && m.group).map((m) => m.group),
-  );
-  const left = document.getElementById('groups-left');
-  const right = document.getElementById('groups-right');
-  left.innerHTML = '';
-  right.innerHTML = '';
+function crestImg(t) {
+  const url = t && t.crest ? t.crest : '';
+  return `<img class="crest" src="${url}" alt="" onerror="this.style.visibility='hidden'">`;
+}
 
-  GROUPS.forEach((g, i) => {
-    const box = el('div', 'group-box' + (todayGroups.has(g) ? ' today' : ''));
+function render(data) {
+  const matches = data.matches || [];
+  const standingsByGroup = Object.fromEntries((data.standings || []).map((s) => [s.group, s.table]));
+  renderGroups(standingsByGroup);
+  renderCalendar(groupStageByMatchday(matches));
+  renderBracket(placeKnockout(matches));
+  renderLiveCount(matches);
+  renderStatus(data.updatedAt);
+}
+
+/* ---- Band 1: group standings ---- */
+function renderGroups(standingsByGroup) {
+  const wrap = document.getElementById('groups');
+  wrap.innerHTML = '';
+  GROUPS.forEach((g) => {
+    const box = el('div', 'group-box');
     box.appendChild(el('div', 'group-head', groupLabel(g)));
-
+    box.appendChild(el('div', 'standings-row head',
+      '<span></span><span class="team">Đội</span><span class="p">Trận</span><span class="pts">Điểm</span>'));
     const table = sortStandings(standingsByGroup[g] || []);
     if (table.length === 0) {
-      box.appendChild(el('div', 'row empty', '—'));
+      box.appendChild(el('div', 'standings-row empty', '—'));
     } else {
-      table.forEach((r) => {
-        box.appendChild(
-          el(
-            'div',
-            'row',
-            `<img class="crest" src="${r.crest}" alt="" onerror="this.style.visibility='hidden'">` +
-              `<span class="code">${r.code || r.team}</span>` +
-              `<span class="p">${r.played}</span>` +
-              `<span class="pts">${r.points}</span>`,
-          ),
-        );
+      table.forEach((r, i) => {
+        box.appendChild(el('div', 'standings-row' + (i === 0 ? ' r1' : ''),
+          `${crestImg(r)}<span class="team">${r.code || r.team}</span>`
+          + `<span class="p">${r.played}</span><span class="pts">${r.points}</span>`));
       });
     }
-    (i < 6 ? left : right).appendChild(box);
+    wrap.appendChild(box);
   });
 }
 
-function renderToday(today) {
-  const list = document.getElementById('today-list');
-  list.innerHTML = '';
-  if (today.length === 0) {
-    list.appendChild(el('div', 'today-empty', 'Không có trận đấu hôm nay'));
-    return;
-  }
-  today.forEach((m) => {
-    const d = matchDisplay(m, TZ);
-    let right;
-    if (d.state === 'upcoming') {
-      right = `<span class="t-time">${d.time}</span>`;
-    } else {
-      const minute = d.minute ? `<span class="t-min">${d.minute}</span>`
-        : d.state === 'live' ? '<span class="t-min">LIVE</span>' : '';
-      right = `<span class="t-score">${d.score}</span>${minute}`;
-    }
-    list.appendChild(
-      el('div', 'today-match ' + d.state,
-        `<span class="t-teams">${teamLabel(m.home)} v ${teamLabel(m.away)}</span>${right}`),
-    );
-  });
+/* ---- Band 2: matchday calendar ---- */
+function matchRow(m) {
+  const d = matchDisplay(m, TZ);
+  let mid;
+  if (d.state === 'upcoming') mid = `<span class="mid time">${toLocalDateTime(m.utcDate, TZ)}</span>`;
+  else if (d.state === 'live') mid = `<span class="mid live">${d.score}</span>`;
+  else mid = `<span class="mid">${d.score}</span>`;
+  return el('div', 'match-row' + (d.state === 'live' ? ' live' : ''),
+    `<span class="side home"><span class="code">${teamLabel(m.home)}</span>${crestImg(m.home)}</span>`
+    + mid
+    + `<span class="side away">${crestImg(m.away)}<span class="code">${teamLabel(m.away)}</span></span>`);
 }
 
-function renderBracket(byStage, todayIds) {
-  const wrap = document.getElementById('bracket');
+function renderCalendar(byMatchday) {
+  const wrap = document.getElementById('calendar');
   wrap.innerHTML = '';
-  KNOCKOUT_STAGES.forEach((stage) => {
-    const isFinal = stage === 'FINAL';
-    const col = el('div', 'bracket-col' + (isFinal ? ' final' : ''));
-    col.appendChild(el('div', 'bracket-label', STAGE_LABEL[stage]));
-    if (isFinal) col.appendChild(el('div', 'slot trophy', '🏆'));
-
-    const ms = byStage[stage] || [];
+  [1, 2, 3].forEach((md) => {
+    const col = el('div', 'md-col md' + md);
+    col.appendChild(el('div', 'md-head', MATCHDAY_LABEL[md]));
+    const ms = byMatchday[md] || [];
     if (ms.length === 0) {
-      col.appendChild(el('div', 'slot tbd', '—'));
+      col.appendChild(el('div', 'match-row', '<span></span><span class="mid time">—</span><span></span>'));
     } else {
-      ms.forEach((m) => {
-        const d = matchDisplay(m, TZ);
-        const mid = d.state === 'upcoming' ? d.time : d.score;
-        col.appendChild(
-          el('div', 'slot ' + d.state + (todayIds.has(m.id) ? ' today' : ''),
-            `<span>${teamLabel(m.home)}</span><b>${mid}</b><span>${teamLabel(m.away)}</span>`),
-        );
-      });
+      ms.forEach((m) => col.appendChild(matchRow(m)));
     }
     wrap.appendChild(col);
   });
 }
 
+/* ---- Band 3: knockout bracket (mirrored) ---- */
+function koSlot(m) {
+  const d = matchDisplay(m, TZ);
+  const showScore = d.state !== 'upcoming';
+  const hs = showScore ? `<span class="sc">${m.score?.home ?? ''}</span>` : '';
+  const as = showScore ? `<span class="sc">${m.score?.away ?? ''}</span>` : '';
+  const isTBD = teamLabel(m.home) === 'TBD' && teamLabel(m.away) === 'TBD';
+  const slot = el('div', 'ko-slot' + (d.state === 'live' ? ' live' : '') + (isTBD ? ' tbd' : ''));
+  slot.appendChild(el('div', 'ko-date', toLocalDateTime(m.utcDate, TZ)));
+  slot.appendChild(el('div', 'ko-line', `${crestImg(m.home)}<span class="code">${teamLabel(m.home)}</span>${hs}`));
+  slot.appendChild(el('div', 'ko-line', `${crestImg(m.away)}<span class="code">${teamLabel(m.away)}</span>${as}`));
+  return slot;
+}
+
+function bracketColumn(label, cls, matches) {
+  const col = el('div', 'bracket-col');
+  col.appendChild(el('div', 'round-head ' + cls, label));
+  (matches || []).forEach((m) => col.appendChild(koSlot(m)));
+  return col;
+}
+
+function half(arr) {
+  const list = arr || [];
+  const mid = Math.ceil(list.length / 2);
+  return [list.slice(0, mid), list.slice(mid)];
+}
+
+function renderBracket(byStage) {
+  const wrap = document.getElementById('bracket');
+  wrap.innerHTML = '';
+
+  const [r16L, r16R] = half(byStage.LAST_32);
+  const [r8L, r8R] = half(byStage.LAST_16);
+  const [qfL, qfR] = half(byStage.QUARTER_FINALS);
+  const [sfL, sfR] = half(byStage.SEMI_FINALS);
+
+  // Left half
+  wrap.appendChild(bracketColumn(STAGE_LABEL.LAST_32, 'r16', r16L));
+  wrap.appendChild(bracketColumn(STAGE_LABEL.LAST_16, 'r8', r8L));
+  wrap.appendChild(bracketColumn(STAGE_LABEL.QUARTER_FINALS, 'qf', qfL));
+  wrap.appendChild(bracketColumn(STAGE_LABEL.SEMI_FINALS, 'sf', sfL));
+
+  // Center: final + trophy + third place
+  const center = el('div', 'bracket-col center');
+  center.appendChild(el('div', 'round-head final', STAGE_LABEL.FINAL));
+  (byStage.FINAL || []).forEach((m) => center.appendChild(koSlot(m)));
+  center.appendChild(el('div', 'trophy-centerpiece', '<div class="cup">🏆</div><div class="cap">VÔ ĐỊCH 2026</div>'));
+  center.appendChild(el('div', 'round-head third', STAGE_LABEL.THIRD_PLACE));
+  (byStage.THIRD_PLACE || []).forEach((m) => center.appendChild(koSlot(m)));
+  wrap.appendChild(center);
+
+  // Right half (mirrored)
+  wrap.appendChild(bracketColumn(STAGE_LABEL.SEMI_FINALS, 'sf', sfR));
+  wrap.appendChild(bracketColumn(STAGE_LABEL.QUARTER_FINALS, 'qf', qfR));
+  wrap.appendChild(bracketColumn(STAGE_LABEL.LAST_16, 'r8', r8R));
+  wrap.appendChild(bracketColumn(STAGE_LABEL.LAST_32, 'r16', r16R));
+}
+
+/* ---- Header / footer ---- */
 function renderLiveCount(matches) {
   const live = matches.filter((m) => m.status === 'IN_PLAY' || m.status === 'PAUSED').length;
-  const badge = document.getElementById('livecount');
   document.getElementById('livenum').textContent = String(live);
-  badge.hidden = live === 0;
+  document.getElementById('livecount').hidden = live === 0;
 }
 
 function renderStatus(updatedAt) {
   const upd = document.getElementById('updated');
-  if (!updatedAt) {
-    upd.textContent = 'Chưa có dữ liệu';
-    return;
-  }
+  if (!updatedAt) { upd.textContent = 'Chưa có dữ liệu'; return; }
   const t = new Intl.DateTimeFormat('vi-VN', {
     timeZone: TZ, hour: '2-digit', minute: '2-digit', hour12: false,
   }).format(new Date(updatedAt));
@@ -150,13 +172,8 @@ function renderStatus(updatedAt) {
 function tick() {
   document.getElementById('datetime').textContent = new Intl.DateTimeFormat('vi-VN', {
     timeZone: TZ, weekday: 'long', day: '2-digit', month: '2-digit',
-    hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false,
+    hour: '2-digit', minute: '2-digit', hour12: false,
   }).format(new Date());
-}
-
-function maybeRollover() {
-  const key = new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date());
-  if (key !== lastDateKey && lastData) render(lastData);
 }
 
 document.getElementById('tzlabel').textContent = 'Giờ địa phương: ' + TZ;
@@ -164,4 +181,3 @@ tick();
 load();
 setInterval(tick, 1000);
 setInterval(load, 60000);
-setInterval(maybeRollover, 60000);

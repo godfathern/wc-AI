@@ -6,12 +6,18 @@ export const KNOCKOUT_STAGES = [
 
 export const STAGE_LABEL = {
   GROUP_STAGE: 'VÒNG BẢNG',
-  LAST_32: 'VÒNG 32',
-  LAST_16: 'VÒNG 16',
+  LAST_32: 'VÒNG 1/16',
+  LAST_16: 'VÒNG 1/8',
   QUARTER_FINALS: 'VÒNG TỨ KẾT',
   SEMI_FINALS: 'VÒNG BÁN KẾT',
-  THIRD_PLACE: 'TRANH HẠNG BA',
+  THIRD_PLACE: 'TRANH HẠNG 3',
   FINAL: 'CHUNG KẾT',
+};
+
+export const MATCHDAY_LABEL = {
+  1: 'LƯỢT TRẬN 1 VÒNG BẢNG',
+  2: 'LƯỢT TRẬN 2 VÒNG BẢNG',
+  3: 'LƯỢT TRẬN CUỐI VÒNG BẢNG',
 };
 
 export function groupLabel(letter) {
@@ -35,6 +41,16 @@ export function toLocalTime(utcISO, tz) {
     minute: '2-digit',
     hour12: false,
   }).format(new Date(utcISO));
+}
+
+export function toLocalDateTime(utcISO, tz) {
+  if (!utcISO) return '—';
+  const date = new Intl.DateTimeFormat('en-GB', {
+    timeZone: tz,
+    day: '2-digit',
+    month: '2-digit',
+  }).format(new Date(utcISO));
+  return `${date} ${toLocalTime(utcISO, tz)}`;
 }
 
 export function localDateKey(utcISO, tz) {
@@ -93,6 +109,21 @@ export function placeKnockout(matches) {
   }
   for (const stage of KNOCKOUT_STAGES) {
     out[stage].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+  }
+  return out;
+}
+
+export function groupStageByMatchday(matches) {
+  const out = { 1: [], 2: [], 3: [] };
+  for (const m of matches) {
+    if (m.stage === 'GROUP_STAGE' && out[m.matchday]) out[m.matchday].push(m);
+  }
+  for (const md of [1, 2, 3]) {
+    out[md].sort(
+      (a, b) =>
+        new Date(a.utcDate) - new Date(b.utcDate) ||
+        String(a.group).localeCompare(String(b.group)),
+    );
   }
   return out;
 }

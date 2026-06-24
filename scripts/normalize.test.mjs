@@ -14,6 +14,7 @@ test('normalize maps a live group match', () => {
     status: 'IN_PLAY',
     stage: 'GROUP_STAGE',
     group: 'B',
+    matchday: 1,
     minute: 67,
     home: { name: 'Argentina', code: 'ARG', crest: 'https://x/arg.png' },
     away: { name: 'Nigeria', code: 'NGA', crest: 'https://x/nga.png' },

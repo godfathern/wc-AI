@@ -20,6 +20,7 @@ export function normalize(matchesResp, standingsResp) {
     status: m.status,
     stage: m.stage,
     group: groupKey(m.group),
+    matchday: m.matchday ?? null,
     minute: m.minute ?? null,
     home: team(m.homeTeam),
     away: team(m.awayTeam),

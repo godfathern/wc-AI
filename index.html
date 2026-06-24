@@ -3,29 +3,44 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>World Cup 2026</title>
+  <title>FIFA World Cup 2026 — Lịch thi đấu</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header id="topbar">
-    <span class="logo">🏆</span>
-    <span class="brand">WORLD CUP 2026</span>
-    <span id="datetime"></span>
-    <span id="livecount" class="badge-live" hidden>● <span id="livenum">0</span> TRỰC TIẾP</span>
+    <div class="brand">
+      <span class="logo">🏆</span>
+      <div class="brand-text">
+        <div class="brand-line1">LỊCH THI ĐẤU VÒNG CHUNG KẾT</div>
+        <div class="brand-line2">FIFA WORLD CUP <span class="year">2026</span></div>
+      </div>
+    </div>
+    <div class="topmeta">
+      <span id="datetime"></span>
+      <span id="livecount" class="badge-live" hidden>● <span id="livenum">0</span> TRỰC TIẾP</span>
+    </div>
   </header>
 
-  <main id="chart">
-    <section id="groups-left" class="groups"></section>
-
-    <section id="center">
-      <div id="today-panel">
-        <div class="today-head">⭐ HÔM NAY ⭐</div>
-        <div id="today-list"></div>
-      </div>
-      <div id="bracket"></div>
+  <main>
+    <!-- BAND 1: GROUP STANDINGS -->
+    <section class="band">
+      <h2 class="band-title t-groups">BẢNG XẾP HẠNG VÒNG BẢNG</h2>
+      <div id="groups" class="groups-grid"></div>
     </section>
 
-    <section id="groups-right" class="groups"></section>
+    <!-- BAND 2: GROUP-STAGE CALENDAR BY MATCHDAY -->
+    <section class="band">
+      <h2 class="band-title t-calendar">LỊCH THI ĐẤU VÒNG BẢNG</h2>
+      <div id="calendar" class="calendar-grid"></div>
+    </section>
+
+    <!-- BAND 3: KNOCKOUT BRACKET -->
+    <section class="band">
+      <h2 class="band-title t-bracket">VÒNG ĐẤU LOẠI TRỰC TIẾP</h2>
+      <div class="bracket-scroll">
+        <div id="bracket" class="bracket"></div>
+      </div>
+    </section>
   </main>
 
   <footer id="statusbar">
