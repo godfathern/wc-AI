@@ -129,13 +129,27 @@ function bracketColumn(label, cls, matches) {
   return col;
 }
 
+// Staggered arc: centre cards raised + larger, flanks lower/smaller, outers
+// tilted outward and overlapping — a "formation" rather than a flat equal row.
+const FORMATION = [
+  { dy: 24, sc: 0.82, rot: -8, z: 1 },
+  { dy: 6, sc: 0.94, rot: -4, z: 2 },
+  { dy: -14, sc: 1.14, rot: -2, z: 4 },
+  { dy: -14, sc: 1.14, rot: 2, z: 4 },
+  { dy: 6, sc: 0.94, rot: 4, z: 2 },
+  { dy: 24, sc: 0.82, rot: 8, z: 1 },
+];
+
 function playersStrip() {
   const strip = el('div', 'players-strip');
   PLAYER_PHOTOS.forEach((src, i) => {
+    const f = FORMATION[i] || { dy: 0, sc: 1, rot: 0, z: 1 };
     const img = document.createElement('img');
     img.className = 'player-card';
     img.src = src;
     img.alt = 'Cầu thủ ' + (i + 1);
+    img.style.transform = `translateY(${f.dy}px) scale(${f.sc}) rotate(${f.rot}deg)`;
+    img.style.zIndex = String(f.z);
     img.onerror = function () { this.style.visibility = 'hidden'; };
     strip.appendChild(img);
   });

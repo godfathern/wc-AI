@@ -158,7 +158,7 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
   min-height: 620px;
 }
 .bracket-col { display: flex; flex-direction: column; gap: 8px; min-width: 132px; }
-.bracket-col.center { min-width: 372px; align-items: center; justify-content: center; }
+.bracket-col.center { min-width: 460px; align-items: center; justify-content: center; }
 /* Equal-height columns + space-around make each round's slots land at the
    vertical midpoints of the round that feeds it — proper bracket alignment. */
 .col-slots { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
@@ -199,20 +199,22 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
 
 .players-strip {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
-  margin-bottom: 10px;
+  align-items: center;
+  min-height: 150px;
+  margin-bottom: 16px;
 }
 .player-card {
-  width: 56px;
-  height: 74px;
+  width: 86px;
+  height: 116px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #fff;
+  border-radius: 12px;
+  border: 3px solid #fff;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(20, 33, 61, 0.2);
+  box-shadow: 0 8px 18px rgba(20, 33, 61, 0.3);
+  transform-origin: center bottom;
 }
+.player-card:not(:first-child) { margin-left: -18px; }
 
 /* ---------- Footer ---------- */
 #statusbar {
