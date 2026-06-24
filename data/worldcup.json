@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T04:42:32.513Z",
+  "updatedAt": "2026-06-24T04:47:33.694Z",
   "standings": [
     {
       "group": "A",
@@ -886,7 +886,7 @@
       },
       "away": {
         "name": "Curaçao",
-        "code": "CUW",
+        "code": "CUR",
         "crest": "https://crests.football-data.org/curacao.svg"
       },
       "score": {
@@ -1024,7 +1024,7 @@
       },
       "away": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1484,7 +1484,7 @@
       },
       "away": {
         "name": "Curaçao",
-        "code": "CUW",
+        "code": "CUR",
         "crest": "https://crests.football-data.org/curacao.svg"
       },
       "score": {
@@ -1571,7 +1571,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
@@ -1962,7 +1962,7 @@
       "minute": null,
       "home": {
         "name": "Curaçao",
-        "code": "CUW",
+        "code": "CUR",
         "crest": "https://crests.football-data.org/curacao.svg"
       },
       "away": {
@@ -2123,7 +2123,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
