@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T20:01:25.547Z",
+  "updatedAt": "2026-06-25T21:51:25.918Z",
   "standings": [
     {
       "group": "A",
@@ -240,8 +240,8 @@
           "won": 2,
           "draw": 1,
           "lost": 0,
-          "gf": 9,
-          "ga": 2,
+          "gf": 10,
+          "ga": 3,
           "gd": 7,
           "points": 7
         },
@@ -250,13 +250,13 @@
           "code": "CIV",
           "crest": "https://crests.football-data.org/787.svg",
           "played": 3,
-          "won": 1,
-          "draw": 1,
+          "won": 2,
+          "draw": 0,
           "lost": 1,
-          "gf": 2,
+          "gf": 4,
           "ga": 2,
-          "gd": 0,
-          "points": 4
+          "gd": 2,
+          "points": 6
         },
         {
           "team": "Ecuador",
@@ -266,8 +266,8 @@
           "won": 0,
           "draw": 2,
           "lost": 1,
-          "gf": 0,
-          "ga": 1,
+          "gf": 1,
+          "ga": 2,
           "gd": -1,
           "points": 2
         },
@@ -277,12 +277,12 @@
           "crest": "https://crests.football-data.org/curacao.svg",
           "played": 3,
           "won": 0,
-          "draw": 2,
-          "lost": 1,
+          "draw": 1,
+          "lost": 2,
           "gf": 1,
-          "ga": 7,
-          "gd": -6,
-          "points": 2
+          "ga": 9,
+          "gd": -8,
+          "points": 1
         }
       ]
     },
@@ -1932,7 +1932,7 @@
     {
       "id": 537355,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "E",
       "matchday": 3,
@@ -1948,14 +1948,14 @@
         "crest": "https://crests.football-data.org/759.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       }
     },
     {
       "id": 537356,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "E",
       "matchday": 3,
@@ -1971,8 +1971,8 @@
         "crest": "https://crests.football-data.org/787.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       }
     },
     {
