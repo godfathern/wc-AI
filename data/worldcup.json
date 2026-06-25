@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T13:14:31.343Z",
+  "updatedAt": "2026-06-25T17:56:48.053Z",
   "standings": [
     {
       "group": "A",
@@ -1024,7 +1024,7 @@
       },
       "away": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1571,7 +1571,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
@@ -2123,7 +2123,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
