@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T00:08:45.780Z",
+  "updatedAt": "2026-06-25T04:32:28.231Z",
   "standings": [
     {
       "group": "A",
@@ -8,52 +8,52 @@
           "team": "Mexico",
           "code": "MEX",
           "crest": "https://crests.football-data.org/769.svg",
-          "played": 2,
-          "won": 2,
+          "played": 3,
+          "won": 3,
           "draw": 0,
           "lost": 0,
-          "gf": 3,
+          "gf": 6,
           "ga": 0,
-          "gd": 3,
-          "points": 6
+          "gd": 6,
+          "points": 9
+        },
+        {
+          "team": "South Africa",
+          "code": "RSA",
+          "crest": "https://crests.football-data.org/9396.svg",
+          "played": 3,
+          "won": 1,
+          "draw": 1,
+          "lost": 1,
+          "gf": 2,
+          "ga": 3,
+          "gd": -1,
+          "points": 4
         },
         {
           "team": "South Korea",
           "code": "KOR",
           "crest": "https://crests.football-data.org/772.png",
-          "played": 2,
+          "played": 3,
           "won": 1,
           "draw": 0,
-          "lost": 1,
+          "lost": 2,
           "gf": 2,
-          "ga": 2,
-          "gd": 0,
+          "ga": 3,
+          "gd": -1,
           "points": 3
         },
         {
           "team": "Czechia",
           "code": "CZE",
           "crest": "https://crests.football-data.org/798.svg",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "draw": 1,
-          "lost": 1,
+          "lost": 2,
           "gf": 2,
-          "ga": 3,
-          "gd": -1,
-          "points": 1
-        },
-        {
-          "team": "South Africa",
-          "code": "RSA",
-          "crest": "https://crests.football-data.org/9396.svg",
-          "played": 2,
-          "won": 0,
-          "draw": 1,
-          "lost": 1,
-          "gf": 1,
-          "ga": 3,
-          "gd": -2,
+          "ga": 6,
+          "gd": -4,
           "points": 1
         }
       ]
@@ -1024,7 +1024,7 @@
       },
       "away": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1571,7 +1571,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
@@ -1886,7 +1886,7 @@
     {
       "id": 537331,
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "A",
       "matchday": 3,
@@ -1902,14 +1902,14 @@
         "crest": "https://crests.football-data.org/769.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 3
       }
     },
     {
       "id": 537332,
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "A",
       "matchday": 3,
@@ -1925,8 +1925,8 @@
         "crest": "https://crests.football-data.org/772.png"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
@@ -2123,7 +2123,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URU",
+        "code": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
