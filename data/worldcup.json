@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T04:32:28.231Z",
+  "updatedAt": "2026-06-25T08:01:30.974Z",
   "standings": [
     {
       "group": "A",
@@ -1024,7 +1024,7 @@
       },
       "away": {
         "name": "Uruguay",
-        "code": "URY",
+        "code": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1571,7 +1571,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URY",
+        "code": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
@@ -2123,7 +2123,7 @@
       "minute": null,
       "home": {
         "name": "Uruguay",
-        "code": "URY",
+        "code": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
@@ -2398,9 +2398,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Germany",
+        "code": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
       },
       "away": {
         "name": "TBD",
@@ -2490,9 +2490,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Mexico",
+        "code": "MEX",
+        "crest": "https://crests.football-data.org/769.svg"
       },
       "away": {
         "name": "TBD",
@@ -2559,9 +2559,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "United States",
+        "code": "USA",
+        "crest": "https://crests.football-data.org/usa.svg"
       },
       "away": {
         "name": "TBD",
@@ -2674,9 +2674,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Argentina",
+        "code": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "away": {
         "name": "TBD",
