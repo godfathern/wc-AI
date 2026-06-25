@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T21:51:25.918Z",
+  "updatedAt": "2026-06-25T23:15:40.805Z",
   "standings": [
     {
       "group": "A",
@@ -238,12 +238,12 @@
           "crest": "https://crests.football-data.org/759.svg",
           "played": 3,
           "won": 2,
-          "draw": 1,
-          "lost": 0,
+          "draw": 0,
+          "lost": 1,
           "gf": 10,
-          "ga": 3,
-          "gd": 7,
-          "points": 7
+          "ga": 4,
+          "gd": 6,
+          "points": 6
         },
         {
           "team": "Ivory Coast",
@@ -263,13 +263,13 @@
           "code": "ECU",
           "crest": "https://crests.football-data.org/791.svg",
           "played": 3,
-          "won": 0,
-          "draw": 2,
+          "won": 1,
+          "draw": 1,
           "lost": 1,
-          "gf": 1,
+          "gf": 2,
           "ga": 2,
-          "gd": -1,
-          "points": 2
+          "gd": 0,
+          "points": 4
         },
         {
           "team": "Curaçao",
@@ -293,53 +293,53 @@
           "team": "Netherlands",
           "code": "NED",
           "crest": "https://crests.football-data.org/8601.svg",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "draw": 1,
+          "draw": 2,
           "lost": 0,
           "gf": 7,
           "ga": 3,
           "gd": 4,
-          "points": 4
+          "points": 5
         },
         {
           "team": "Japan",
           "code": "JPN",
           "crest": "https://crests.football-data.org/766.svg",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "draw": 1,
+          "draw": 2,
           "lost": 0,
           "gf": 6,
           "ga": 2,
           "gd": 4,
-          "points": 4
+          "points": 5
         },
         {
           "team": "Sweden",
           "code": "SWE",
           "crest": "https://crests.football-data.org/792.svg",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
           "gf": 6,
           "ga": 6,
           "gd": 0,
-          "points": 3
+          "points": 4
         },
         {
           "team": "Tunisia",
           "code": "TUN",
           "crest": "https://crests.football-data.org/tunisia.svg",
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "draw": 0,
+          "draw": 1,
           "lost": 2,
           "gf": 1,
           "ga": 9,
           "gd": -8,
-          "points": 0
+          "points": 1
         }
       ]
     },
@@ -1932,7 +1932,7 @@
     {
       "id": 537355,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "E",
       "matchday": 3,
@@ -1955,7 +1955,7 @@
     {
       "id": 537356,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "E",
       "matchday": 3,
@@ -1978,7 +1978,7 @@
     {
       "id": 537361,
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "F",
       "matchday": 3,
@@ -1994,14 +1994,14 @@
         "crest": "https://crests.football-data.org/8601.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       }
     },
     {
       "id": 537362,
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "F",
       "matchday": 3,
@@ -2017,8 +2017,8 @@
         "crest": "https://crests.football-data.org/792.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -2398,9 +2398,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Germany",
-        "code": "GER",
-        "crest": "https://crests.football-data.org/759.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2490,9 +2490,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Mexico",
-        "code": "MEX",
-        "crest": "https://crests.football-data.org/769.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2559,9 +2559,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "United States",
-        "code": "USA",
-        "crest": "https://crests.football-data.org/usa.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2674,9 +2674,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Argentina",
-        "code": "ARG",
-        "crest": "https://crests.football-data.org/762.png"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
