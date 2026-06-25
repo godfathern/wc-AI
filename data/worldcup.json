@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T08:01:30.974Z",
+  "updatedAt": "2026-06-25T13:14:31.343Z",
   "standings": [
     {
       "group": "A",
@@ -2398,9 +2398,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Germany",
-        "code": "GER",
-        "crest": "https://crests.football-data.org/759.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2490,9 +2490,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Mexico",
-        "code": "MEX",
-        "crest": "https://crests.football-data.org/769.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2559,9 +2559,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "United States",
-        "code": "USA",
-        "crest": "https://crests.football-data.org/usa.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2674,9 +2674,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Argentina",
-        "code": "ARG",
-        "crest": "https://crests.football-data.org/762.png"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
