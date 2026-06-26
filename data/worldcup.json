@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T20:05:54.618Z",
+  "updatedAt": "2026-06-26T21:38:10.734Z",
   "standings": [
     {
       "group": "A",
@@ -468,9 +468,9 @@
           "won": 3,
           "draw": 0,
           "lost": 0,
-          "gf": 9,
+          "gf": 10,
           "ga": 2,
-          "gd": 7,
+          "gd": 8,
           "points": 9
         },
         {
@@ -482,8 +482,8 @@
           "draw": 0,
           "lost": 1,
           "gf": 8,
-          "ga": 6,
-          "gd": 2,
+          "ga": 7,
+          "gd": 1,
           "points": 6
         },
         {
@@ -494,9 +494,9 @@
           "won": 1,
           "draw": 0,
           "lost": 2,
-          "gf": 4,
+          "gf": 8,
           "ga": 6,
-          "gd": -2,
+          "gd": 2,
           "points": 3
         },
         {
@@ -508,8 +508,8 @@
           "draw": 0,
           "lost": 3,
           "gf": 1,
-          "ga": 8,
-          "gd": -7,
+          "ga": 12,
+          "gd": -11,
           "points": 0
         }
       ]
@@ -2070,7 +2070,7 @@
     {
       "id": 537395,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "I",
       "matchday": 3,
@@ -2087,13 +2087,13 @@
       },
       "score": {
         "home": 1,
-        "away": 3
+        "away": 4
       }
     },
     {
       "id": 537396,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "I",
       "matchday": 3,
@@ -2109,7 +2109,7 @@
         "crest": "https://crests.football-data.org/iraq.svg"
       },
       "score": {
-        "home": 1,
+        "home": 5,
         "away": 0
       }
     },
