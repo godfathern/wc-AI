@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T16:13:51.261Z",
+  "updatedAt": "2026-06-26T18:05:00.089Z",
   "standings": [
     {
       "group": "A",
@@ -1886,7 +1886,7 @@
     {
       "id": 537331,
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "A",
       "matchday": 3,
@@ -1902,14 +1902,14 @@
         "crest": "https://crests.football-data.org/769.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 3
       }
     },
     {
       "id": 537332,
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "A",
       "matchday": 3,
@@ -1925,14 +1925,14 @@
         "crest": "https://crests.football-data.org/772.png"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
       "id": 537355,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "E",
       "matchday": 3,
@@ -1948,14 +1948,14 @@
         "crest": "https://crests.football-data.org/759.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       }
     },
     {
       "id": 537356,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "E",
       "matchday": 3,
@@ -1971,14 +1971,14 @@
         "crest": "https://crests.football-data.org/787.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       }
     },
     {
       "id": 537361,
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "F",
       "matchday": 3,
@@ -1994,14 +1994,14 @@
         "crest": "https://crests.football-data.org/8601.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 3
       }
     },
     {
       "id": 537362,
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "F",
       "matchday": 3,
@@ -2017,8 +2017,8 @@
         "crest": "https://crests.football-data.org/792.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       }
     },
     {
@@ -2398,9 +2398,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Germany",
-        "code": "GER",
-        "crest": "https://crests.football-data.org/759.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2490,9 +2490,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Mexico",
-        "code": "MEX",
-        "crest": "https://crests.football-data.org/769.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2559,9 +2559,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "United States",
-        "code": "USA",
-        "crest": "https://crests.football-data.org/usa.svg"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
@@ -2674,9 +2674,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "Argentina",
-        "code": "ARG",
-        "crest": "https://crests.football-data.org/762.png"
+        "name": "TBD",
+        "code": "",
+        "crest": ""
       },
       "away": {
         "name": "TBD",
