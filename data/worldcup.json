@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T12:16:09.380Z",
+  "updatedAt": "2026-06-27T14:09:44.201Z",
   "standings": [
     {
       "group": "A",
@@ -2070,7 +2070,7 @@
     {
       "id": 537395,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "I",
       "matchday": 3,
@@ -2086,14 +2086,14 @@
         "crest": "https://crests.football-data.org/773.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 4
       }
     },
     {
       "id": 537396,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "I",
       "matchday": 3,
@@ -2109,8 +2109,8 @@
         "crest": "https://crests.football-data.org/iraq.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 5,
+        "away": 0
       }
     },
     {
@@ -2202,7 +2202,7 @@
       },
       "score": {
         "home": 1,
-        "away": 2
+        "away": 1
       }
     },
     {
@@ -2444,9 +2444,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Ivory Coast",
+        "code": "CIV",
+        "crest": "https://crests.football-data.org/787.svg"
       },
       "away": {
         "name": "TBD",
