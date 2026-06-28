@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T23:38:06.019Z",
+  "updatedAt": "2026-06-28T01:50:42.612Z",
   "standings": [
     {
       "group": "A",
@@ -605,13 +605,13 @@
           "code": "COD",
           "crest": "https://crests.football-data.org/congo_dr.svg",
           "played": 3,
-          "won": 0,
-          "draw": 2,
+          "won": 1,
+          "draw": 1,
           "lost": 1,
-          "gf": 1,
-          "ga": 2,
-          "gd": -1,
-          "points": 2
+          "gf": 4,
+          "ga": 3,
+          "gd": 1,
+          "points": 4
         },
         {
           "team": "Uzbekistan",
@@ -619,12 +619,12 @@
           "crest": "https://crests.football-data.org/8070.png",
           "played": 3,
           "won": 0,
-          "draw": 1,
-          "lost": 2,
-          "gf": 1,
-          "ga": 8,
-          "gd": -7,
-          "points": 1
+          "draw": 0,
+          "lost": 3,
+          "gf": 2,
+          "ga": 11,
+          "gd": -9,
+          "points": 0
         }
       ]
     },
@@ -2254,7 +2254,7 @@
     {
       "id": 537407,
       "utcDate": "2026-06-27T23:30:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "K",
       "matchday": 3,
@@ -2277,7 +2277,7 @@
     {
       "id": 537408,
       "utcDate": "2026-06-27T23:30:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "K",
       "matchday": 3,
@@ -2293,8 +2293,8 @@
         "crest": "https://crests.football-data.org/8070.png"
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 3,
+        "away": 1
       }
     },
     {
