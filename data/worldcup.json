@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T06:15:44.548Z",
+  "updatedAt": "2026-06-28T20:01:11.449Z",
   "standings": [
     {
       "group": "A",
@@ -2346,7 +2346,7 @@
     {
       "id": 537417,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2362,8 +2362,8 @@
         "crest": "https://crests.football-data.org/canada.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
