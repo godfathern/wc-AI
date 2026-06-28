@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T20:01:11.449Z",
+  "updatedAt": "2026-06-28T21:16:03.099Z",
   "standings": [
     {
       "group": "A",
@@ -2346,7 +2346,7 @@
     {
       "id": 537417,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2363,7 +2363,7 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       }
     },
     {
