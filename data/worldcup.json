@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T23:44:30.970Z",
+  "updatedAt": "2026-06-30T01:52:07.504Z",
   "standings": [
     {
       "group": "A",
@@ -2408,14 +2408,14 @@
         "crest": "https://crests.football-data.org/761.svg"
       },
       "score": {
-        "home": 5,
-        "away": 6
+        "home": 4,
+        "away": 5
       }
     },
     {
       "id": 537418,
       "utcDate": "2026-06-30T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2431,8 +2431,8 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
