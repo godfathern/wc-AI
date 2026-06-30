@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T18:56:42.309Z",
+  "updatedAt": "2026-06-30T20:57:19.840Z",
   "standings": [
     {
       "group": "A",
@@ -2438,7 +2438,7 @@
     {
       "id": 537424,
       "utcDate": "2026-06-30T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
