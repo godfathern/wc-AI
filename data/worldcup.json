@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T06:09:14.671Z",
+  "updatedAt": "2026-06-30T09:59:44.312Z",
   "standings": [
     {
       "group": "A",
@@ -2431,7 +2431,7 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "home": 4,
+        "home": 3,
         "away": 4
       }
     },
@@ -2725,9 +2725,9 @@
         "crest": "https://crests.football-data.org/canada.svg"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Morocco",
+        "code": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
         "home": null,
@@ -2743,9 +2743,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Paraguay",
+        "code": "PAR",
+        "crest": "https://crests.football-data.org/761.svg"
       },
       "away": {
         "name": "TBD",
@@ -2766,9 +2766,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Brazil",
+        "code": "BRA",
+        "crest": "https://crests.football-data.org/764.svg"
       },
       "away": {
         "name": "TBD",
