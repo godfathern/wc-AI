@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T06:26:51.675Z",
+  "updatedAt": "2026-07-01T18:08:40.475Z",
   "standings": [
     {
       "group": "A",
@@ -2507,7 +2507,7 @@
     {
       "id": 537426,
       "utcDate": "2026-07-01T16:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2523,8 +2523,8 @@
         "crest": "https://crests.football-data.org/congo_dr.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       }
     },
     {
