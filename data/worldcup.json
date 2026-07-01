@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T01:56:02.786Z",
+  "updatedAt": "2026-07-01T06:26:51.675Z",
   "standings": [
     {
       "group": "A",
@@ -2484,7 +2484,7 @@
     {
       "id": 537425,
       "utcDate": "2026-07-01T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2500,7 +2500,7 @@
         "crest": "https://crests.football-data.org/791.svg"
       },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 0
       }
     },
@@ -2748,9 +2748,9 @@
         "crest": "https://crests.football-data.org/761.svg"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "France",
+        "code": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
       },
       "score": {
         "home": null,
@@ -2771,9 +2771,9 @@
         "crest": "https://crests.football-data.org/764.svg"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Norway",
+        "code": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
       },
       "score": {
         "home": null,
