@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T23:12:16.722Z",
+  "updatedAt": "2026-07-02T01:26:33.911Z",
   "standings": [
     {
       "group": "A",
@@ -2553,7 +2553,7 @@
     {
       "id": 537421,
       "utcDate": "2026-07-02T00:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2569,8 +2569,8 @@
         "crest": "https://crests.football-data.org/bosnia.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
