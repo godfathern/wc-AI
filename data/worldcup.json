@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T01:20:54.389Z",
+  "updatedAt": "2026-07-03T05:12:19.421Z",
   "standings": [
     {
       "group": "A",
@@ -2616,13 +2616,13 @@
       },
       "score": {
         "home": 2,
-        "away": 2
+        "away": 1
       }
     },
     {
       "id": 537429,
       "utcDate": "2026-07-03T03:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2638,8 +2638,8 @@
         "crest": "https://crests.football-data.org/algeria.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       }
     },
     {
