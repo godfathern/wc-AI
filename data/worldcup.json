@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T18:10:59.476Z",
+  "updatedAt": "2026-07-03T19:52:35.481Z",
   "standings": [
     {
       "group": "A",
@@ -2661,8 +2661,8 @@
         "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       }
     },
     {
