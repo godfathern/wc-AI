@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T04:50:13.779Z",
+  "updatedAt": "2026-07-04T06:23:08.789Z",
   "standings": [
     {
       "group": "A",
@@ -2812,14 +2812,14 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Portugal",
+        "code": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Spain",
+        "code": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
         "home": null,
@@ -2858,14 +2858,14 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Argentina",
+        "code": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Egypt",
+        "code": "EGY",
+        "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
         "home": null,
@@ -2881,14 +2881,14 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Switzerland",
+        "code": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Colombia",
+        "code": "COL",
+        "crest": "https://crests.football-data.org/818.svg"
       },
       "score": {
         "home": null,
