@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T23:29:33.243Z",
+  "updatedAt": "2026-07-04T01:09:47.525Z",
   "standings": [
     {
       "group": "A",
@@ -2668,7 +2668,7 @@
     {
       "id": 537427,
       "utcDate": "2026-07-03T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2684,8 +2684,8 @@
         "crest": "https://crests.football-data.org/cape_verde.svg"
       },
       "score": {
-        "home": 1,
-        "away": 1
+        "home": 3,
+        "away": 2
       }
     },
     {
