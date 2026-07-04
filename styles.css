@@ -156,12 +156,12 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 10px;
+  gap: 6px;
   min-width: max-content;
   min-height: 620px;
 }
-.bracket-col { display: flex; flex-direction: column; gap: 8px; min-width: 132px; }
-.bracket-col.center { min-width: 320px; align-items: center; justify-content: center; }
+.bracket-col { display: flex; flex-direction: column; gap: 8px; min-width: 108px; }
+.bracket-col.center { min-width: 248px; align-items: center; justify-content: center; }
 /* Equal-height columns + space-around make each round's slots land at the
    vertical midpoints of the round that feeds it — proper bracket alignment. */
 .col-slots { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
@@ -201,8 +201,8 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
 .trophy-centerpiece .cap { font-size: 12px; font-weight: 800; color: var(--final); margin-top: 4px; }
 
 .hero-photo {
-  width: 280px;
-  height: 360px;
+  width: 224px;
+  height: 292px;
   object-fit: cover;
   border-radius: 16px;
   border: 4px solid #fff;
@@ -213,7 +213,7 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
 
 /* Scrolling "running letter" banner above the hero photo */
 .champ-banner {
-  width: 280px;
+  width: 224px;
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
