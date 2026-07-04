@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T01:09:47.525Z",
+  "updatedAt": "2026-07-04T04:50:13.779Z",
   "standings": [
     {
       "group": "A",
@@ -2691,7 +2691,7 @@
     {
       "id": 537430,
       "utcDate": "2026-07-04T01:30:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2707,8 +2707,8 @@
         "crest": "https://crests.football-data.org/ghana.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
