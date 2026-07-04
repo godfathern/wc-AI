@@ -1,27 +1,19 @@
-# Player photos (placeholders)
+# Center photo
 
-These six files (`player1.svg` … `player6.svg`) are **placeholder silhouettes**
-shown in the centre of the knockout bracket, echoing the reference poster.
-They are generic graphics, not real player photos — replace them with your own.
+`player4.jpg` is the single large portrait shown in the centre of the knockout
+bracket. Replace it with your own image.
 
-## How to replace with your own photos
-
-**Easiest (no code change):** overwrite each file in this folder, keeping the
-same name. If your photos are PNG/JPG, save them as `player1.png` (etc.) and
-update the six paths in the `PLAYER_PHOTOS` array near the top of `app.js`.
-
-**Or point at any filenames:** edit `PLAYER_PHOTOS` in `app.js`:
-
-```js
-const PLAYER_PHOTOS = [
-  'assets/players/messi.jpg',
-  'assets/players/ronaldo.jpg',
-  // ...six entries total
-];
-```
+## How to replace
+- **Easiest:** overwrite `assets/players/player4.jpg` with your photo, keeping
+  the same name. Any web format works (`.jpg` / `.png` / `.webp`).
+- Or point at a different file: edit `HERO_PHOTO` near the top of `app.js`:
+  ```js
+  const HERO_PHOTO = 'assets/players/my-photo.jpg';
+  ```
 
 ## Tips
-- Use **portrait** images, roughly **3:4** (e.g. 120×160 or larger). They're
-  shown in rounded cards and cropped to fit (`object-fit: cover`).
-- Any web image format works: `.svg`, `.png`, `.jpg`, `.webp`.
-- Make sure you have the right to publish whatever photos you use.
+- Use a **portrait** image (~3:4, e.g. 600×800). It's shown in a rounded card
+  and cropped to fit (`object-fit: cover`).
+- **HEIC (iPhone) does NOT work in browsers** — convert to JPG first. On a Mac:
+  `sips -s format jpeg -Z 800 photo.HEIC --out photo.jpg`
+- Make sure you have the right to publish whatever photo you use.

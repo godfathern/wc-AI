@@ -6,16 +6,9 @@ import {
 const TZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let lastData = null;
 
-// Placeholder player portraits shown in the centre of the bracket (like the poster).
-// Replace the files in assets/players/ — or point these paths at your own images.
-const PLAYER_PHOTOS = [
-  'assets/players/player1.svg',
-  'assets/players/player2.svg',
-  'assets/players/player3.svg',
-  'assets/players/player4.jpg',
-  'assets/players/player5.svg',
-  'assets/players/player6.svg',
-];
+// One big photo shown in the centre of the bracket. Replace this file with
+// your own image (assets/players/player4.jpg) — or point it at any path.
+const HERO_PHOTO = 'assets/players/player4.png';
 
 async function load() {
   try {
@@ -129,31 +122,13 @@ function bracketColumn(label, cls, matches) {
   return col;
 }
 
-// Staggered arc: centre cards raised + larger, flanks lower/smaller, outers
-// tilted outward and overlapping — a "formation" rather than a flat equal row.
-const FORMATION = [
-  { dy: 24, sc: 0.82, rot: -8, z: 1 },
-  { dy: 6, sc: 0.94, rot: -4, z: 2 },
-  { dy: -14, sc: 1.14, rot: -2, z: 4 },
-  { dy: -14, sc: 1.14, rot: 2, z: 4 },
-  { dy: 6, sc: 0.94, rot: 4, z: 2 },
-  { dy: 24, sc: 0.82, rot: 8, z: 1 },
-];
-
-function playersStrip() {
-  const strip = el('div', 'players-strip');
-  PLAYER_PHOTOS.forEach((src, i) => {
-    const f = FORMATION[i] || { dy: 0, sc: 1, rot: 0, z: 1 };
-    const img = document.createElement('img');
-    img.className = 'player-card';
-    img.src = src;
-    img.alt = 'Cầu thủ ' + (i + 1);
-    img.style.transform = `translateY(${f.dy}px) scale(${f.sc}) rotate(${f.rot}deg)`;
-    img.style.zIndex = String(f.z);
-    img.onerror = function () { this.style.visibility = 'hidden'; };
-    strip.appendChild(img);
-  });
-  return strip;
+function heroPhoto() {
+  const img = document.createElement('img');
+  img.className = 'hero-photo';
+  img.src = HERO_PHOTO;
+  img.alt = 'Ảnh';
+  img.onerror = function () { this.style.display = 'none'; };
+  return img;
 }
 
 function half(arr) {
@@ -177,9 +152,9 @@ function renderBracket(byStage) {
   wrap.appendChild(bracketColumn(STAGE_LABEL.QUARTER_FINALS, 'qf', qfL));
   wrap.appendChild(bracketColumn(STAGE_LABEL.SEMI_FINALS, 'sf', sfL));
 
-  // Center: players strip (poster hero) + final + trophy + third place
+  // Center: one big hero photo + final + trophy + third place
   const center = el('div', 'bracket-col center');
-  center.appendChild(playersStrip());
+  center.appendChild(heroPhoto());
   center.appendChild(el('div', 'round-head final', STAGE_LABEL.FINAL));
   (byStage.FINAL || []).forEach((m) => center.appendChild(koSlot(m)));
   center.appendChild(el('div', 'trophy-centerpiece', '<div class="cup">🏆</div><div class="cap">VÔ ĐỊCH 2026</div>'));

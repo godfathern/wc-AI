@@ -158,7 +158,7 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
   min-height: 620px;
 }
 .bracket-col { display: flex; flex-direction: column; gap: 8px; min-width: 132px; }
-.bracket-col.center { min-width: 460px; align-items: center; justify-content: center; }
+.bracket-col.center { min-width: 320px; align-items: center; justify-content: center; }
 /* Equal-height columns + space-around make each round's slots land at the
    vertical midpoints of the round that feeds it — proper bracket alignment. */
 .col-slots { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
@@ -197,24 +197,16 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
 .trophy-centerpiece .cup { font-size: 64px; line-height: 1; }
 .trophy-centerpiece .cap { font-size: 12px; font-weight: 800; color: var(--final); margin-top: 4px; }
 
-.players-strip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 150px;
+.hero-photo {
+  width: 280px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 4px solid #fff;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(20, 33, 61, 0.38);
   margin-bottom: 16px;
 }
-.player-card {
-  width: 86px;
-  height: 116px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid #fff;
-  background: #fff;
-  box-shadow: 0 8px 18px rgba(20, 33, 61, 0.3);
-  transform-origin: center bottom;
-}
-.player-card:not(:first-child) { margin-left: -18px; }
 
 /* ---------- Footer ---------- */
 #statusbar {
