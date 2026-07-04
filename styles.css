@@ -30,6 +30,9 @@ body {
   color: var(--ink);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.25;
+  /* TV safe-area: keep content off the screen edges (avoids overscan clipping) */
+  padding-inline: clamp(16px, 2.2vw, 44px);
+  overflow-x: hidden;
 }
 
 /* ---------- Header ---------- */
@@ -206,6 +209,32 @@ main { max-width: 1600px; margin: 0 auto; padding: 18px; }
   background: #fff;
   box-shadow: 0 14px 34px rgba(20, 33, 61, 0.38);
   margin-bottom: 16px;
+}
+
+/* Scrolling "running letter" banner above the hero photo */
+.champ-banner {
+  width: 280px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(90deg, var(--final), var(--sf));
+  color: #fff;
+  border-radius: 20px;
+  padding: 7px 0;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(20, 33, 61, 0.25);
+}
+.champ-text {
+  display: inline-block;
+  padding-left: 100%;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  animation: champ-run 9s linear infinite;
+}
+@keyframes champ-run {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
 /* ---------- Footer ---------- */

@@ -152,8 +152,9 @@ function renderBracket(byStage) {
   wrap.appendChild(bracketColumn(STAGE_LABEL.QUARTER_FINALS, 'qf', qfL));
   wrap.appendChild(bracketColumn(STAGE_LABEL.SEMI_FINALS, 'sf', sfL));
 
-  // Center: one big hero photo + final + trophy + third place
+  // Center: running-text banner + one big hero photo + final + trophy + third place
   const center = el('div', 'bracket-col center');
+  center.appendChild(el('div', 'champ-banner', '<span class="champ-text">Ông bà vô địch!!!</span>'));
   center.appendChild(heroPhoto());
   center.appendChild(el('div', 'round-head final', STAGE_LABEL.FINAL));
   (byStage.FINAL || []).forEach((m) => center.appendChild(koSlot(m)));
