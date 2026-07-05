@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T23:11:40.971Z",
+  "updatedAt": "2026-07-05T07:46:13.456Z",
   "standings": [
     {
       "group": "A",
@@ -2904,14 +2904,14 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "France",
+        "code": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Morocco",
+        "code": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
         "home": null,
