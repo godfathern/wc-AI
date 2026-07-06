@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T10:58:29.912Z",
+  "updatedAt": "2026-07-06T19:14:35.801Z",
   "standings": [
     {
       "group": "A",
@@ -2806,7 +2806,7 @@
     {
       "id": 537379,
       "utcDate": "2026-07-06T19:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "stage": "LAST_16",
       "group": null,
       "matchday": null,
@@ -2822,8 +2822,8 @@
         "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
