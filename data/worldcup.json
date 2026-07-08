@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T23:00:00.034Z",
+  "updatedAt": "2026-07-08T06:15:19.418Z",
   "standings": [
     {
       "group": "A",
@@ -2973,14 +2973,14 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Argentina",
+        "code": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Switzerland",
+        "code": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
       },
       "score": {
         "home": null,
