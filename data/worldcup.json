@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T06:15:19.418Z",
+  "updatedAt": "2026-07-09T20:17:33.166Z",
   "standings": [
     {
       "group": "A",
@@ -2898,7 +2898,7 @@
     {
       "id": 537383,
       "utcDate": "2026-07-09T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "QUARTER_FINALS",
       "group": null,
       "matchday": null,
@@ -2914,8 +2914,8 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
