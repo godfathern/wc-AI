@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T20:17:33.166Z",
+  "updatedAt": "2026-07-09T21:51:10.183Z",
   "standings": [
     {
       "group": "A",
@@ -2914,7 +2914,7 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 0
       }
     },
