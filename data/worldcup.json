@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T20:41:45.347Z",
+  "updatedAt": "2026-07-10T21:43:53.563Z",
   "standings": [
     {
       "group": "A",
@@ -2921,7 +2921,7 @@
     {
       "id": 537384,
       "utcDate": "2026-07-10T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "QUARTER_FINALS",
       "group": null,
       "matchday": null,
@@ -2937,7 +2937,7 @@
         "crest": "https://crests.football-data.org/805.svg"
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       }
     },
