@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T23:08:39.728Z",
+  "updatedAt": "2026-07-10T07:59:29.912Z",
   "standings": [
     {
       "group": "A",
@@ -2996,9 +2996,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "France",
+        "code": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
       },
       "away": {
         "name": "TBD",
