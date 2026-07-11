@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T21:43:53.563Z",
+  "updatedAt": "2026-07-11T06:56:33.367Z",
   "standings": [
     {
       "group": "A",
@@ -3001,9 +3001,9 @@
         "crest": "https://crests.football-data.org/773.svg"
       },
       "away": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Spain",
+        "code": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
         "home": null,
