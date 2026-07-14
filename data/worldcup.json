@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T07:12:36.529Z",
+  "updatedAt": "2026-07-14T20:00:54.065Z",
   "standings": [
     {
       "group": "A",
@@ -2990,7 +2990,7 @@
     {
       "id": 537387,
       "utcDate": "2026-07-14T19:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "stage": "SEMI_FINALS",
       "group": null,
       "matchday": null,
@@ -3006,8 +3006,8 @@
         "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
