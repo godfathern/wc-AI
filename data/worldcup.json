@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T21:11:19.835Z",
+  "updatedAt": "2026-07-15T08:03:19.242Z",
   "standings": [
     {
       "group": "A",
@@ -3042,9 +3042,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "France",
+        "code": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
       },
       "away": {
         "name": "TBD",
@@ -3065,9 +3065,9 @@
       "matchday": null,
       "minute": null,
       "home": {
-        "name": "TBD",
-        "code": "",
-        "crest": ""
+        "name": "Spain",
+        "code": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
       },
       "away": {
         "name": "TBD",
