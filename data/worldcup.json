@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T20:28:48.564Z",
+  "updatedAt": "2026-07-15T21:31:04.718Z",
   "standings": [
     {
       "group": "A",
@@ -3013,7 +3013,7 @@
     {
       "id": 537388,
       "utcDate": "2026-07-15T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "group": null,
       "matchday": null,
@@ -3030,7 +3030,7 @@
       },
       "score": {
         "home": 1,
-        "away": 0
+        "away": 2
       }
     },
     {
